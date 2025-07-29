@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Emotional History</title>
+</head>
+<body>
+    <h1>Past Journal Entries</h1>
+    <a href="/">← Back to Journal</a>
+    <ul>
+        {% for entry, emotion, timestamp in entries %}
+            <li>
+                <strong>{{ emotion }}</strong> — {{ timestamp }}<br>
+                {{ entry }}
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
